@@ -1,0 +1,62 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+syntax = "proto3";
+
+message SomeMessage {
+
+  message Address {
+    string street = 1;
+    string city = 2;
+    string state = 3;
+    string zip = 4;
+  }
+
+  message Phonenumbers {
+    string type = 1;
+    string number = 2;
+  }
+
+  message Education {
+    string degree = 1;
+    string major = 2;
+    string university = 3;
+    uint32 graduationYear = 4;
+  }
+
+  message Workexperience {
+    string company = 1;
+    string position = 2;
+    string startDate = 3;
+    string endDate = 4;
+  }
+
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  uint32 age = 4;
+  Address address = 5;
+  repeated Phonenumbers phoneNumbers = 6;
+  bool isMarried = 7;
+  bool hasChildren = 8;
+  repeated string interests = 9;
+  repeated Education education = 10;
+  repeated Workexperience workExperience = 11;
+  string selfIntroduction = 12;
+}

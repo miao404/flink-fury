@@ -1,0 +1,65 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+headerPath = "Apache-2.0-ASF.txt"
+
+excludes = [
+    # Skipped
+    "*.txt",
+    "go.sum",
+    "go/fory/tests/structs_fory_gen.go",
+
+    # Generated
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/state/generated/**",
+    "integration_tests/idl_tests/**/auto_id.*",
+
+    # Derived
+    "ci/format.sh",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/Identity2IdMap.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/data/Data.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/data/Image.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/data/Media.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/data/MediaContent.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/data/Sample.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/state/BufferType.java",
+    "benchmarks/java_benchmark/src/main/java/org/apache/fory/benchmark/state/KryoState.java",
+    "java/fory-core/src/main/java/org/apache/fory/codegen/Code.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/ForyObjectMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/IdentityMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/IdentityObjectIntMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/LongMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/LongLongByteMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/collection/ObjectIntMap.java",
+    "java/fory-core/src/main/java/org/apache/fory/io/ClassLoaderObjectInputStream.java",
+    "java/fory-core/src/main/java/org/apache/fory/memory/MemoryBuffer.java",
+    "java/fory-core/src/main/java/org/apache/fory/reflect/TypeParameter.java",
+    "java/fory-core/src/main/java/org/apache/fory/reflect/TypeRef.java",
+    "java/fory-core/src/main/java/org/apache/fory/reflect/Types.java",
+    "java/fory-core/src/main/java/org/apache/fory/type/Generics.java",
+    "java/fory-core/src/main/java/org/apache/fory/util/MurmurHash3.java",
+    "java/fory-core/src/main/java/org/apache/fory/util/concurrency/DirectExecutorService.java",
+    "java/fory-core/src/main/java/org/apache/fory/memory/Platform.java",
+    "java/fory-core/src/main/java/org/apache/fory/util/Preconditions.java",
+    "java/fory-core/src/test/java/org/apache/fory/type/GenericsTest.java",
+    "java/fory-format/src/main/java/org/apache/fory/format/vectorized/ArrowWriter.java",
+    "javascript/packages/fory/lib/murmurHash3.ts",
+    "cpp/fory/thirdparty/MurmurHash3.*",
+]
+
+[mapping.DOUBLESLASH_STYLE]
+extensions = ['go']
+filenames = ['go.mod']
